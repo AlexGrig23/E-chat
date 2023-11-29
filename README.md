@@ -28,8 +28,8 @@ Bot name: @rabbitmq_test_bot
    ```shell
    python -m venv venv
    ```
-Don't forget to activate it cd venv/Scripts
-"\\.activate" and come back in workdir e-chat
+Don't forget to activate it cd venv/Scripts and command 
+\\.activate and come back in workdir e-chat
 
 **2. Create a `.env` file based on the `.env.example` file:**
 
