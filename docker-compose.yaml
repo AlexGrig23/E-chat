@@ -1,0 +1,30 @@
+version: '3'
+services:
+  bot:
+    build: .
+    command: /bin/bash -c "python main.py"
+    volumes:
+      - .:/code/
+    environment:
+      EXTERNAL_API_URL: ${EXTERNAL_API_URL}
+      CLOUDAMQP_URL: ${CLOUDAMQP_URL}
+    env_file:
+      - .env
+
+# In this solution below code doesn't make sense because I used cloudamqp
+# It is here so that you can see that I can do this if was use rabbitMQ locally
+
+#    depends_on:
+#      - rbmq
+#
+#  rbmq:
+#    image: rabbitmq
+#    restart: always
+#    environment:
+#      AMQP_USER: ${AMQP_USER}
+#      AMQP_PASSWORD: ${AMQP_PASSWORD}
+#      AMQP_VHOST: ${AMQP_VHOST}
+#    ports:
+#      - 5672:5672
+#    env_file:
+#      - .env
