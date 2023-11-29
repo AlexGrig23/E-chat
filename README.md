@@ -28,6 +28,8 @@ Bot name: @rabbitmq_test_bot
    ```shell
    python -m venv venv
    ```
+Don't forget to activate it cd venv/Scripts
+\.activate and come back in workdir e-chat
 
 **2. Create a `.env` file based on the `.env.example` file:**
 
@@ -36,7 +38,7 @@ Bot name: @rabbitmq_test_bot
    ```
 
    ```shell
-   cp .env.example .env
+   copy .env.example .env
    ```
 **3. If you want to run using Docker you must have a Docker desktop**
   
